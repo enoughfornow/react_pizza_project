@@ -13,12 +13,10 @@ function Categories() {
     <div className="categories">
     <ul>
       {pizzaCategories.map((value, index) => 
-      <li onClick={() => onClickCategories(index)} className={activeIndex === index ? 'active' : ''}>
+      <li key={value} onClick={() => onClickCategories(index)} className={activeIndex === index ? 'active' : ''}>
         {value}
         </li>
       )}
-      
-     
     </ul>
   </div>
   )
