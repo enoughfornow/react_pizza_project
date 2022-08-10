@@ -10,7 +10,7 @@ function Header() {
           <div className="header__logo">
             <img width="38" src={pizzaLogo} alt="Pizza logo" />
             <div>
-              <h1>React Pizza</h1>sd
+              <h1>React Pizza</h1>
               <p>самая вкусная пицца во вселенной</p>
             </div>
           </div>
