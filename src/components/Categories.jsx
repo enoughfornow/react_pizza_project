@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 function Categories() {
 
@@ -13,12 +13,10 @@ function Categories() {
     <div className="categories">
     <ul>
       {pizzaCategories.map((value, index) => 
-      <li onClick={() => onClickCategories(index)} className={activeIndex === index ? 'active' : ''}>
+      <li key={value} onClick={() => onClickCategories(index)} className={activeIndex === index ? 'active' : ''}>
         {value}
         </li>
       )}
-      
-     
     </ul>
   </div>
   )
