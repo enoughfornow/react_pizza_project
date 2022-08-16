@@ -1,7 +1,7 @@
 import React from 'react';
-import { SearchContext } from '../../App';
 import debounce from 'lodash.debounce';
 
+import { SearchContext } from '../../App';
 import styles from './Search.module.scss';
 
 const Search = () => {
