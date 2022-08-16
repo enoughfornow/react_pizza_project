@@ -1,4 +1,3 @@
-
 @import './variables';
 @import './libs/normalize.scss';
 
@@ -19,7 +18,7 @@ body {
   @media (max-width: 650px) {
     width: calc(100vw - 30px);
     margin-top: 15px;
-}
+  }
 }
 
 .content {
@@ -44,8 +43,8 @@ body {
 
     @media (max-width: 1400px) {
       grid-template-columns: repeat(3, 1fr);
-  }
-  
+    }
+
     @media (max-width: 1060px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -65,25 +64,23 @@ body {
         margin-bottom: 30px;
         width: 100%;
         overflow: auto;
-        
-         ul {
+
+        ul {
           width: 785px;
-         }
+        }
       }
     }
-      @media (max-width: 760px) {
-        .categories {
-          ul {
-            li {
-              padding: 8px 20px;
-            }
+    @media (max-width: 760px) {
+      .categories {
+        ul {
+          li {
+            padding: 8px 20px;
           }
         }
       }
-
     }
   }
-
+}
 
 .container {
   width: $container-width;
