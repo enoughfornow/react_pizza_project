@@ -18,7 +18,7 @@ import Pagination from '../components/Pagination/Index';
 
 import { fetchPizzas, selectPizzaData } from '../redux/slices/pizzaSlice';
 
-function Home() {
+const Home: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { categoryId, sort, currentPage, searchValue } = useSelector(selectFilter);
@@ -31,6 +31,7 @@ function Home() {
     const search = searchValue ? `&search=${searchValue}` : '';
 
     dispatch(
+      // @ts-ignore
       fetchPizzas({
         search,
         currentPage,
@@ -42,11 +43,11 @@ function Home() {
     window.scrollTo(0, 0);
   };
 
-  const onClickCategoryId = (id) => {
-    dispatch(setCategoryId(id));
+  const onClickCategoryId = (index: number) => {
+    dispatch(setCategoryId(index));
   };
-  const onChangePage = (number) => {
-    dispatch(setCurrentPage(number));
+  const onChangePage = (page: number) => {
+    dispatch(setCurrentPage(page));
   };
 
   // при первом рендере нельзя вшивать параметры в URL
@@ -83,7 +84,7 @@ function Home() {
     fetchItems();
   }, [categoryId, sortType, currentPage, searchValue]);
 
-  const pizzas = items.map((obj) => (
+  const pizzas = items.map((obj: any) => (
     <Link key={obj.id} to={`/pizza/${obj.id}`}>
       <PizzaBlock {...obj} />
     </Link>
