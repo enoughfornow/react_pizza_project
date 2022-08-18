@@ -2,9 +2,14 @@ import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import qs from 'qs';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-import { selectFilter, setCategoryId, setCurrentPage, setFilters } from '../redux/slices/filterSlice';
+import {
+  selectFilter,
+  setCategoryId,
+  setCurrentPage,
+  setFilters,
+} from '../redux/slices/filterSlice';
 import Categories from '../components/Categories';
 import Sort, { list } from '../components/Sort';
 import PizzaBlock from '../components/PizzaBlock';
@@ -21,8 +26,6 @@ function Home() {
   const sortType = sort.sortProperty;
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
-
-
 
   const fetchItems = async () => {
     const search = searchValue ? `&search=${searchValue}` : '';
@@ -80,7 +83,11 @@ function Home() {
     fetchItems();
   }, [categoryId, sortType, currentPage, searchValue]);
 
-  const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
+  const pizzas = items.map((obj) => (
+    <Link key={obj.id} to={`/pizza/${obj.id}`}>
+      <PizzaBlock {...obj} />
+    </Link>
+  ));
   const skeletons = [...new Array(6)].map((_, i) => <Skeleton key={i} />);
 
   return (
