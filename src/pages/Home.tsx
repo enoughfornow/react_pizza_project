@@ -83,7 +83,7 @@ const Home: React.FC = () => {
     fetchItems();
   }, [categoryId, sortType, currentPage, searchValue]);
 
-  const pizzas = items.map((obj: any) => <PizzaBlock key={obj.id} {...obj} />);
+  const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
   const skeletons = [...new Array(6)].map((_, i) => <Skeleton key={i} />);
 
   return (
