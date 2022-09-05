@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react_pizza_project/static/css/main.dd45871a.css",
-    "main.js": "/react_pizza_project/static/js/main.d0a9878e.js",
-    "Cart.js": "/react_pizza_project/static/js/Cart.7ed3fcb1.chunk.js",
+    "main.js": "/react_pizza_project/static/js/main.4dab2df1.js",
+    "Cart.js": "/react_pizza_project/static/js/Cart.72f7e710.chunk.js",
     "NotFound.css": "/react_pizza_project/static/css/NotFound.134ec1b1.chunk.css",
     "NotFound.js": "/react_pizza_project/static/js/NotFound.fa0479aa.chunk.js",
     "FullPizza.css": "/react_pizza_project/static/css/FullPizza.877d5ad5.chunk.css",
@@ -11,8 +11,8 @@
     "static/media/pizza-logo.svg": "/react_pizza_project/static/media/pizza-logo.56ac87032d8f6fdf863326acd06c0d97.svg",
     "index.html": "/react_pizza_project/index.html",
     "main.dd45871a.css.map": "/react_pizza_project/static/css/main.dd45871a.css.map",
-    "main.d0a9878e.js.map": "/react_pizza_project/static/js/main.d0a9878e.js.map",
-    "Cart.7ed3fcb1.chunk.js.map": "/react_pizza_project/static/js/Cart.7ed3fcb1.chunk.js.map",
+    "main.4dab2df1.js.map": "/react_pizza_project/static/js/main.4dab2df1.js.map",
+    "Cart.72f7e710.chunk.js.map": "/react_pizza_project/static/js/Cart.72f7e710.chunk.js.map",
     "NotFound.134ec1b1.chunk.css.map": "/react_pizza_project/static/css/NotFound.134ec1b1.chunk.css.map",
     "NotFound.fa0479aa.chunk.js.map": "/react_pizza_project/static/js/NotFound.fa0479aa.chunk.js.map",
     "FullPizza.877d5ad5.chunk.css.map": "/react_pizza_project/static/css/FullPizza.877d5ad5.chunk.css.map",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.dd45871a.css",
-    "static/js/main.d0a9878e.js"
+    "static/js/main.4dab2df1.js"
   ]
 }
