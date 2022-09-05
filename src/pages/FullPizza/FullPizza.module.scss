@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  margin-left: 20px;
+  
+}
+.container_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pizza_title {
+
+}
+
+.pizza_desc {
+  font-size: 30px;
+  width: 600px;
+}
+
+.pizza_price {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
