@@ -14,7 +14,7 @@ import Pagination from '../components/Pagination/Index';
 import { useAppDispatch } from '../redux/store';
 import { selectFilter } from '../redux/filter/selectors';
 import { selectPizzaData } from '../redux/items/selectors';
-import { fetchPizzas } from '../redux/items/asyncActions';
+import { fetchPizzas } from '../redux/items/asyncAction';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
   const fetchItems = async () => {
     const search = searchValue ? `&search=${searchValue}` : '';
 
-    dispatch(
+    await dispatch(
       fetchPizzas({
         search,
         currentPage: String(currentPage),
@@ -46,39 +46,6 @@ const Home: React.FC = () => {
     dispatch(setCurrentPage(page));
   };
 
-  // при первом рендере нельзя вшивать параметры в URL
-  // React.useEffect(() => {
-  //   if (isMounted.current) {
-  //     const queryString = qs.stringify({
-  //       sortProperty: sort.sortProperty,
-  //       categoryId,
-  //       currentPage,
-  //     });
-  //     navigate(`?${queryString}`);
-  //   }
-  //   // после первого рендера вшиваем параметры в URL
-  //   isMounted.current = true;
-  // }, [categoryId, sort.sortProperty, currentPage]);
-
-  // если был первый рендер, то проверяем параметры и сохраняем в редаксе
-  // React.useEffect(() => {
-  //   if (window.location.search) {
-  //     const params = qs.parse(window.location.search.substring(1)) as unknown as SearchPizzaParams;
-  //     const sort = list.find((obj) => obj.sortProperty === params.sortType);
-
-  //     dispatch(
-  //       setFilters({
-  //         searchValue: params.search,
-  //         categoryId: params.categoryId,
-  //         currentPage: Number(params.currentPage),
-  //         sort: sort || list[0],
-  //       }),
-  //     );
-  //   }
-  //   isMounted.current = true;
-  // }, []);
-
-  // если был первый рендер, то запрашиваем айтемы с сервера
   React.useEffect(() => {
     fetchItems();
   }, [categoryId, sortType, currentPage, searchValue]);
